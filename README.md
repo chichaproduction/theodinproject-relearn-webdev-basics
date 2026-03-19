@@ -2,8 +2,7 @@
 A website with all my TOP learning and experiences while refreshing and relearning Website Development
 
 ## 🚀 Features
-* Feature 1: Why is this cool?
-* Feature 2: What problem does it solve?
+* Feature 1: HTML, CSS, And JS playground
 
 ## 🛠️ Built With
 * HTML
