@@ -10,7 +10,7 @@ A website with all my TOP learning and experiences while refreshing and relearni
 * JS
 
 ## 📦 How to Run
-1. Clone this repo: `git clone [link]`
+1. Clone this repo: https://github.com/chichaproduction/theodinproject-relearn-webdev-basics.git
 2. Open `index.html` (or run your start command)
 
 ## 👤 Author
