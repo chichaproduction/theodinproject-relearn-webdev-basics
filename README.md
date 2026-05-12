@@ -48,17 +48,17 @@ For ubuntu with restricted folders, we need to create a group where our users wo
 # Create a Group
 sudo groupadd [name_of_group]
 
-    -groupadd: The command to create a new group.
+    -groupadd - The command to create a new group.
 
 # Add users to Group
 sudo usermod -aG [name_of_group] [user]
 sudo usermod -aG [name_of_group] www-data
 
-    usermod: User Modify. Changing user settings.
+    usermod - User Modify. Changing user settings.
 
     -aG:
-    -a (Append): Adds the group without removing you from your other groups (like your admin or audio groups).
-    -G (Group): Specifies the group name following it.
+    -a (Append) - Adds the group without removing you from your other groups (like your admin or audio groups).
+    -G (Group) - Specifies the group name following it.
 
     www-data: This is the default username Nginx uses on Ubuntu to "talk" to your files.
 
@@ -72,18 +72,21 @@ sudo mkdir -p /var/www/[folder_name]
 # Give ownership to the Nginx user
 sudo chown -R root:[name_of_group] /var/www
 
-    chown: Change Owner.
+    chown - Change Owner.
 
-    -R: Recursive. This applies the change to the folder and every file/subfolder inside.
+    -R: Recursive - This applies the change to the folder and every file/subfolder inside.
 
-    root:[name_of_group]: The Owner:Group format. Root is the owner; [name_of_group] is the group in charge.
+    root:[name_of_group] - The Owner:Group format. Root is the owner; [name_of_group] is the group in charge.
 
 sudo chmod -R 775 /var/www
 
+    chmod - Change Mode (Permissions)
+    -R: Recursive - This applies the change to the folder and every file/subfolder inside.
+
     775:
     - First 7 (Root): Read (4) + Write (2) + Execute (1) = Full control.
-    - Second 7 (Group/WebDevs): Read (4) + Write (2) + Execute (1). So your editor wont ask for authoritation if you save
-    - Last 5 (The World): Read (4) + Execute (1). They can see the site but can't touch the code.
+    - Second 7 (Group): Read (4) + Write (2) + Execute (1). //So your editor wont ask for authoritation if you save//
+    - Last 5 (Anyone else): Read (4) + Execute (1). //They can see the site but can't touch the code.//
 
 6. Deployment/Development Ready
 To reload Nginx:
