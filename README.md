@@ -45,12 +45,12 @@ server {
 4. User and Development
 For ubuntu with restricted folders, we need to create a group where our users would be added
 
-# Create a Group
+## Create a Group
 sudo groupadd [name_of_group]
 
     -groupadd - The command to create a new group.
 
-# Add users to Group
+## Add users to Group
 sudo usermod -aG [name_of_group] [user]
 sudo usermod -aG [name_of_group] www-data
 
@@ -66,10 +66,10 @@ sudo usermod -aG [name_of_group] www-data
 5. Permission & Security Setup
 To simulate a production environment without compromising your /home directory security, set up the web directory permissions:
 
-# Create the target directory
+## Create the target directory
 sudo mkdir -p /var/www/[folder_name]
 
-# Give ownership to the Nginx user
+## Give ownership to the Nginx user
 sudo chown -R root:[name_of_group] /var/www
 
     chown - Change Owner.
