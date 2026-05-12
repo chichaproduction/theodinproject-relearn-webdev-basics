@@ -81,11 +81,11 @@ sudo chown -R root:[name_of_group] /var/www
 sudo chmod -R 775 /var/www
 
     775:
-    First 7 (Root): Read (4) + Write (2) + Execute (1) = Full control.
-    Second 7 (Group/WebDevs): Read (4) + Write (2) + Execute (1). So your editor wont ask for authoritation if you save
-    Last 5 (The World): Read (4) + Execute (1). They can see the site but can't touch the code.
+    - First 7 (Root): Read (4) + Write (2) + Execute (1) = Full control.
+    - Second 7 (Group/WebDevs): Read (4) + Write (2) + Execute (1). So your editor wont ask for authoritation if you save
+    - Last 5 (The World): Read (4) + Execute (1). They can see the site but can't touch the code.
 
-5. Deployment/Development Ready
+6. Deployment/Development Ready
 To reload Nginx:
 sudo nginx -t && sudo nginx -s reload
 
